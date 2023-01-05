@@ -14,12 +14,12 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
     }
 
-    public void Signup(View view) {
+    public void Signup_li(View view) {
         Intent t = new Intent(this,MainActivity.class);
         startActivity(t);
     }
 
-    public void Login(View view) {
+    public void Login_li(View view) {
         Intent t = new Intent(this,MainActivity3.class);
         startActivity(t);
     }
