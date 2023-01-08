@@ -82,7 +82,8 @@
         android:ems="10"
         android:hint=" Email"
         android:inputType="textEmailAddress"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:textColorHint="#757575" />
 
     <EditText
         android:id="@+id/phoneInput"
@@ -96,7 +97,8 @@
         android:ems="10"
         android:hint=" Phone"
         android:inputType="phone"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:textColorHint="#757575" />
 
     <EditText
         android:id="@+id/lastNameInput"
