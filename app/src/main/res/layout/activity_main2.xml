@@ -41,7 +41,7 @@
         android:textSize="20dp" />
 
     <EditText
-        android:id="@+id/emailInput_li"
+        android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -55,7 +55,7 @@
         android:minHeight="48dp" />
 
     <EditText
-        android:id="@+id/passwordInput_li"
+        android:id="@+id/password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -80,7 +80,7 @@
         android:textSize="20dp" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/loginButton_li"
+        android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -93,7 +93,7 @@
         android:textColor="@color/white" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/signUpButton_li"
+        android:id="@+id/signUpButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
