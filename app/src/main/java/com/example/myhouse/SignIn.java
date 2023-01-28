@@ -15,6 +15,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class SignIn extends AppCompatActivity {
     EditText email,epassword;
@@ -41,14 +42,18 @@ public class SignIn extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
-                        Toast.makeText(SignIn.this,("welcom"),Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SignIn.this,("welcome"),Toast.LENGTH_SHORT).show();
                         Intent t = new Intent(SignIn.this,Home.class);
-                        startActivity(t);}
+                        startActivity(t);
+                    }
                 }
             });
 
         }
     }
 
-
+    public void signup(View view) {
+        Intent t = new Intent(this, SignUp.class);
+        startActivity(t);
+    }
 }

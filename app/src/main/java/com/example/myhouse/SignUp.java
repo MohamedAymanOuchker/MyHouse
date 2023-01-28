@@ -54,7 +54,6 @@ public class SignUp extends AppCompatActivity {
                 }
                 else{
                     Toast.makeText(SignUp.this,task.getException().getMessage(),Toast.LENGTH_SHORT).show();
-
                 }
             }
         });

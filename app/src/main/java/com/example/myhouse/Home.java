@@ -18,4 +18,24 @@ public class Home extends AppCompatActivity {
         Intent t = new Intent(this,Post.class);
         startActivity(t);
     }
+
+    public void explore(View view) {
+        Intent t = new Intent(this, RetrieveData.class);
+        startActivity(t);
+    }
+
+    public void wishlist(View view) {
+        Intent t = new Intent(this,WishList.class);
+        startActivity(t);
+    }
+
+    public void inbox(View view) {
+//        Intent t = new Intent(this,Inbox.class);
+//        startActivity(t);
+    }
+
+    public void profil(View view) {
+        Intent t = new Intent(this,Profile.class);
+        startActivity(t);
+    }
 }

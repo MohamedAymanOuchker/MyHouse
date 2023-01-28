@@ -15,7 +15,10 @@ import android.widget.TextView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
@@ -23,13 +26,12 @@ import java.net.URL;
 
 public class Profile extends AppCompatActivity {
     ImageView iprofile;
-    TextView ifirstName;
-    TextView iLastName;
-    TextView imail;
-    TextView iphone;
+    TextView ifirstName,iLastName,imail,iphone;
     Button edit;
     private static final int Post_Code = 1;
     Uri imageUrl = null;
+    FirebaseAuth mAuth = FirebaseAuth.getInstance();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,9 +48,15 @@ public class Profile extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
                 intent.setType("image/*");
-                startActivityForResult(intent,100);
+                startActivityForResult(intent,Post_Code);
             }
         });
+
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser != null) {
+            String email = currentUser.getEmail();
+            imail.setText(email);
+        }
     }
 
     @Override

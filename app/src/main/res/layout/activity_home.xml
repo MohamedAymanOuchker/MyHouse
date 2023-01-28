@@ -26,12 +26,13 @@
 
     <ImageView
         android:id="@+id/imageView19"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="325dp"
         android:layout_marginBottom="72dp"
+        android:onClick="explore"
         app:srcCompat="@drawable/ic_baseline_search_24" />
 
     <ImageView
@@ -53,6 +54,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="117dp"
         android:layout_marginBottom="72dp"
+        android:onClick="inbox"
         app:srcCompat="@drawable/ic_baseline_inbox_24" />
 
     <ImageView
@@ -63,6 +65,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="26dp"
         android:layout_marginBottom="71dp"
+        android:onClick="profil"
         app:srcCompat="@drawable/ic_baseline_person_24" />
 
     <TextView
@@ -128,11 +131,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
         android:layout_marginStart="140dp"
         android:layout_marginTop="521dp"
         android:layout_marginEnd="140dp"
-        android:layout_marginBottom="238dp"
         android:backgroundTint="@color/c2"
         android:onClick="addPost"
         android:text="Add post" />

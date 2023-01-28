@@ -101,7 +101,7 @@
         android:layout_marginEnd="160dp"
         android:layout_marginBottom="129dp"
         android:background="@color/c2"
-        android:onClick="Signup_li"
+        android:onClick="signup"
         android:text="Sign up"
         android:textColor="@color/white" />
 
