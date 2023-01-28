@@ -6,17 +6,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class MainActivity3 extends AppCompatActivity {
+public class SignUp extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
-    }
-
-    public void wishlist(View view) {
-      Intent t= new Intent(this,MainActivity4.class);
-      startActivity(t);
-
+        setContentView(R.layout.activity_signup);
     }
 }
