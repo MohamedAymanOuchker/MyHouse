@@ -29,7 +29,7 @@ public class Post extends AppCompatActivity {
     DatabaseReference mRef;
     FirebaseStorage mStorage;
     ImageButton imageButton;
-    EditText edtFirst, edtLast;
+    EditText edtCity, edtDesc, edtPrice;
     Button btnInsert;
     private static final int Post_Code = 1;
     Uri imageUrl = null;
@@ -41,8 +41,9 @@ public class Post extends AppCompatActivity {
         setContentView(R.layout.activity_post);
 
         imageButton = findViewById(R.id.imageButton);
-        edtFirst = findViewById(R.id.edtFirstName);
-        edtLast = findViewById(R.id.edtLastName);
+        edtCity = findViewById(R.id.edtCity);
+        edtDesc = findViewById(R.id.edtDesc);
+        edtPrice = findViewById(R.id.edtPrice);
         btnInsert = findViewById(R.id.btnInsert);
 
         mDatabase = FirebaseDatabase.getInstance();
@@ -72,10 +73,11 @@ public class Post extends AppCompatActivity {
         btnInsert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String fn = edtFirst.getText().toString().trim();
-                String ln = edtLast.getText().toString().trim();
+                String c = edtCity.getText().toString().trim();
+                String d = edtDesc.getText().toString().trim();
+                String p = edtPrice.getText().toString().trim();
 
-                if (!fn.isEmpty() && !ln.isEmpty() && imageUrl != null) {
+                if (!c.isEmpty() && !d.isEmpty() && !p.isEmpty() && imageUrl != null) {
                     progressDialog.setTitle("Uploading...");
                     progressDialog.show();
 
@@ -90,8 +92,9 @@ public class Post extends AppCompatActivity {
 
                                     DatabaseReference newPost = mRef.push();
 
-                                    newPost.child("FirstName").setValue(fn);
-                                    newPost.child("LastName").setValue(ln);
+                                    newPost.child("City").setValue(c);
+                                    newPost.child("Description").setValue(d);
+                                    newPost.child("Price").setValue(p);
                                     newPost.child("image").setValue(task.getResult().toString());
                                     progressDialog.dismiss();
 

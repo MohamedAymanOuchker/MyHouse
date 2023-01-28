@@ -3,33 +3,43 @@
 package com.example.myhouse;
 
 public class ImageModel {
-    String FirstName;
-    String LastName;
+    String City;
+    String Description;
+    String Price;
     String image;
 
     public ImageModel() {
     }
 
-    public ImageModel(String firstName, String lastName, String image) {
-        FirstName = firstName;
-        LastName = lastName;
+    public ImageModel(String city, String description, String price, String image) {
+        City = city;
+        Description = description;
+        Price = price;
         this.image = image;
     }
 
-    public String getFirstName() {
-        return FirstName;
+    public String getCity() {
+        return City;
     }
 
-    public void setFirstName(String firstName) {
-        FirstName = firstName;
+    public void setCity(String city) {
+        City = city;
     }
 
-    public String getLastName() {
-        return LastName;
+    public String getDescription() {
+        return Description;
     }
 
-    public void setLastName(String lastName) {
-        LastName = lastName;
+    public void setDescription(String description) {
+        Description = description;
+    }
+
+    public String getPrice() {
+        return Price;
+    }
+
+    public void setPrice(String price) {
+        Price = price;
     }
 
     public String getImage() {

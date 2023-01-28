@@ -28,15 +28,16 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.design_row_for_recycleview,parent,false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.design_row_for_recyclerview,parent,false);
         return new ViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         ImageModel imageModel = imageModelList.get(position);
-        holder.tvFirst.setText("First Name=" + imageModel.getFirstName());
-        holder.tvLast.setText("Last Name=" + imageModel.getLastName());
+        holder.tvCity.setText("City: " + imageModel.getCity());
+        holder.tvDesc.setText("Description: " + imageModel.getDescription());
+        holder.tvPrice.setText("Price: " + imageModel.getPrice());
 
         String imageUri = null;
         imageUri = imageModel.getImage();
@@ -50,13 +51,14 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView imageView;
-        TextView tvFirst, tvLast;
+        TextView tvCity, tvDesc, tvPrice;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             imageView = itemView.findViewById(R.id.image_recyclerview_id);
-            tvFirst = itemView.findViewById(R.id.tvfirstname_recyclerview_id);
-            tvLast = itemView.findViewById(R.id.tvlastName_recyclerview_id);
+            tvCity = itemView.findViewById(R.id.city_recyclerview_id);
+            tvDesc = itemView.findViewById(R.id.desc_recyclerview_id);
+            tvPrice = itemView.findViewById(R.id.price_recyclerview_id);
         }
     }
 }
