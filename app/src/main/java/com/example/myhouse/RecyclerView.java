@@ -1,3 +1,7 @@
+/**
+ * Recycler View class
+ */
+
 package com.example.myhouse;
 
 import androidx.appcompat.app.AppCompatActivity;

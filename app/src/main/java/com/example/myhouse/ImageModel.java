@@ -1,4 +1,6 @@
-//A
+/**
+ * Image class model
+ */
 
 package com.example.myhouse;
 
@@ -8,6 +10,7 @@ public class ImageModel {
     String Price;
     String image;
 
+    // Constructor
     public ImageModel() {
     }
 
@@ -18,6 +21,7 @@ public class ImageModel {
         this.image = image;
     }
 
+    // Getters and setters
     public String getCity() {
         return City;
     }

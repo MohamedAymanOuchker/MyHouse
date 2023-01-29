@@ -1,3 +1,7 @@
+/**
+ * Profile class: display the profile information
+ */
+
 package com.example.myhouse;
 
 import androidx.annotation.NonNull;
@@ -32,6 +36,7 @@ public class Profile extends AppCompatActivity {
     Uri imageUrl = null;
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
+    // Display the user info
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +64,7 @@ public class Profile extends AppCompatActivity {
         }
     }
 
+    // Change the profile image
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

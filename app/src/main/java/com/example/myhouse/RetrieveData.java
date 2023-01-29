@@ -1,4 +1,6 @@
-//A
+/**
+ * Class that retrieve data from firebase
+ */
 
 package com.example.myhouse;
 
@@ -29,6 +31,7 @@ public class RetrieveData extends AppCompatActivity {
     ImageAdapter imageAdapter;
     List<ImageModel> imageModelList;
 
+    // Firebase auth and retrieving the data
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

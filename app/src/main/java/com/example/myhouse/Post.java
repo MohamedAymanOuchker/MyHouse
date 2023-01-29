@@ -1,4 +1,6 @@
-//A
+/**
+ * Post class: this class post the image and description in the database
+ */
 
 package com.example.myhouse;
 
@@ -51,6 +53,7 @@ public class Post extends AppCompatActivity {
         mStorage = FirebaseStorage.getInstance();
         progressDialog = new ProgressDialog(this);
 
+        // Retrieve a photo from the phone
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,6 +64,7 @@ public class Post extends AppCompatActivity {
         });
     }
 
+    // Uploading the data to firebase
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

@@ -1,3 +1,7 @@
+/**
+ * Sign In class
+ */
+
 package com.example.myhouse;
 
 import androidx.annotation.NonNull;
@@ -23,6 +27,7 @@ public class SignIn extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
 
+    // Auth
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +39,7 @@ public class SignIn extends AppCompatActivity {
 
     public void Login_li(View view) {
 
-
+        // Try to log to firebase if success then display a toast message and log in
         String mail=email.getText().toString().trim();
         String password=epassword.getText().toString().trim();
         if(!mail.isEmpty() && !password.isEmpty()){
@@ -52,6 +57,7 @@ public class SignIn extends AppCompatActivity {
         }
     }
 
+    // Sign up button
     public void signup(View view) {
         Intent t = new Intent(this, SignUp.class);
         startActivity(t);

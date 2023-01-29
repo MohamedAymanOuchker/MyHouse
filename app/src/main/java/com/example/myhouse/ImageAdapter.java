@@ -1,4 +1,6 @@
-//A
+/**
+ * The image adapter which set text on the TextView
+ */
 
 package com.example.myhouse;
 
@@ -25,6 +27,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
         this.imageModelList = imageModelList;
     }
 
+    //The view holder
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -32,6 +35,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
         return new ViewHolder(v);
     }
 
+    // Function that set the values on the view holder
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         ImageModel imageModel = imageModelList.get(position);

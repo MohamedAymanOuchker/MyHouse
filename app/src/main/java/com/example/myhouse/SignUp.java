@@ -1,3 +1,7 @@
+/**
+ * Sign Up class
+ */
+
 package com.example.myhouse;
 
 import androidx.annotation.NonNull;
@@ -30,6 +34,7 @@ public class SignUp extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
     }
 
+    // Signing up to firebase
     public void Signup_su(View view) {
 
         String firstname= efirstname.getText().toString().trim();
